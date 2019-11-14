@@ -1,0 +1,13 @@
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: git-source
+  namespace: beer
+spec:
+  type: git
+  params:
+  - name: revision
+    value: master
+  - name: url
+    value: git@github.com:arctiqtim/random-beer-giphy.git
